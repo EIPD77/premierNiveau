@@ -30,6 +30,7 @@ interface Song {
 	songwriters: string[];
 }
 
+type SongsType = Song[];
 interface SoloAlbum {
 	name: string;
 	year: number;
@@ -44,13 +45,20 @@ interface FormedInterface {
 
 interface Members {
 	name: string;
-	instruments: Instrument[];
+	instruments: string[];
 	birthInfo: BirthInfo;
+}
+
+interface Album {
+	name: string;
+	releaseYear: number;
+	producer: string;
+	songs: SongsType;
 }
 
 interface BeatlesDatabase {
 	bandName: string;
 	formed: FormedInterface;
 	members: Members[];
-	albums: [Song, Instrument];
+	albums: Album[];
 }
